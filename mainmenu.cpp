@@ -34,10 +34,21 @@ int adminmenu(){
     return option;
 }
 
+void mainmenu(){
+    cout<<endl<<endl;
+    cout<<"*******************************************"<<endl;
+    cout<<"         LIBRARY MANAGEMENT SYSTEM"<<endl;
+    cout<<"*******************************************"<<endl;
+    cout<<endl<<endl;
+}
+
 int main(){
     Student s;
     Book b;
     Admin a;
+    mainmenu();
+    system("pause");
+
     while(1){
         system("cls");
         int res=mainscreen();

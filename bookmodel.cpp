@@ -41,8 +41,9 @@ class Book{
     }
     void printallbooks(){
        for(int i=0;i<5;i++){
+        cout<<endl;
          cout<<"Book ID: "<<object[i].bookid<<endl;
-        cout<<"Book Name: "<<object[i].bookname<<endl;
+        cout<<"Book Name: "<<object[i].bookname<<endl<<endl;
        }
     }
 };
@@ -102,12 +103,18 @@ class Student{
 
     void adminhistory(Book b){
         for(int i=0;i<10;i++){
-            cout<<endl;
-            cout<<"Student ID: "<<array[i].studentid<<endl;
-            cout<<"Student Name: "<<array[i].name<<endl;
-            for (int j = 0; j < array[i].historysize; j++){
-                b.printbook(array[i].history[j]);
+            
+            if(array[i].historysize!=0){
                 cout<<endl;
+                cout<<"Student ID: "<<array[i].studentid<<endl;
+                cout<<"Student Name: "<<array[i].name<<endl;
+                cout<<"Total No. of Books taken: "<<array[i].historysize<<endl;
+                for (int j = 0; j < array[i].historysize; j++){
+                    cout<<endl;
+                    
+                    b.printbook(array[i].history[j]);
+                    cout<<endl;
+                }
             }
             cout<<endl;
            
@@ -146,6 +153,7 @@ class Student{
         for(int i=0;i<array[id].historysize;i++){
             cout<<i+1<<". ";
             b.printbook(array[id].history[i]);
+            cout<<endl;
         }
         int option;
         cin>>option;
@@ -162,6 +170,7 @@ class Student{
         for(int i=0;i<array[id].historysize;i++){
             cout<<i+1<<". ";
             b.printbook(array[id].history[i]);
+            cout<<endl;
         }
     }
 
